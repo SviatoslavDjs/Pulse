@@ -1,0 +1,214 @@
+.catalog {
+    padding: 0 0 100px 0;
+
+    &__header {
+        font-weight: 400;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--dark-color);
+    }
+
+    &__tabs {
+        padding: 0;
+        margin-top: 70px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__tab {
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        line-height: 48px;
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #6b6b6b;
+        transform: skew(-25deg);
+        cursor: pointer;
+        transition: 0, 5s all;
+
+        &:hover {
+            box-shadow: 3px 3px 20px var(--red-color);
+            border: none;
+        }
+
+        div {
+            transform: skew(25deg);
+        }
+
+        &_active {
+            color: #ffffff;
+            background-color: var(--red-color);
+            border: none;
+        }
+    }
+
+    &__content {
+        margin-top: 60px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        display: none;
+
+        &_active {
+            display: flex;
+        }
+
+    }
+
+    &-item {
+        padding: 20px 20px 26px 20px;
+        width: 300px;
+        min-height: 440px;
+        border: 2px solid #e8e8e8;
+        overflow: hidden;
+
+        &__img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 200px;
+        }
+
+        &__subtitle {
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            color: #0d0d0d;
+        }
+
+        &__descr {
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 14px;
+            text-align: center;
+            color: #0d0d0d;
+        }
+
+        &__link {
+            display: block;
+            margin-top: 17px;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-align: center;
+            color: #c70101;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--red-color);
+            }
+        }
+
+        hr {
+            background-color: #e8e8e8;
+            border-bottom: none;
+            margin-top: 19px;
+            margin-bottom: 21px;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__old-price {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1;
+            text-decoration: line-through;
+            color: #555;
+        }
+
+        &__price {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1;
+            color: #050505;
+        }
+
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+
+        &__content {
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+
+        &__list {
+            position: relative;
+            margin-left: 20px;
+            padding-right: 20px;
+            width: 50%;
+            transform: translateX(0%);
+            transition: 0.5s all;
+            padding-left: 0;
+            padding-bottom: 0;
+            list-style-type: none;
+            padding-left: 19px;
+
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+
+            li {
+                position: relative;
+                font-weight: 300;
+                font-size: 14px;
+                color: #555;
+                margin-bottom: 20px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: var(--red-color);
+                    left: -14px;
+                    top: 8px;
+                }
+            }
+
+
+        }
+
+        &__back {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            display: block;
+            color: var(--red-color);
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-align: center;
+
+            &:hover {
+                color: var(--red-color);
+            }
+        }
+    }
+}
