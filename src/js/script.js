@@ -49,6 +49,37 @@ $(document).ready(function () {
             $('.overlay, #order').fadeIn('slow');
         });
     });
+
+    function valideForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Будь ласка, введіть cвоє ім'я",
+                    minlength: jQuery.validator.format("Введіть {0} кількість символів!")
+                },
+                phone: "Будь ласка, введіть cвій телефон",
+                email: {
+                    required: "Будь ласка, введіть свою ел. адресу",
+                    email: "Ваша адреса повинна бути в форматі name@domain.com"
+                }
+            }
+        });
+    };
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
+    $('input[name=phone]').mask("+3 (999) 999-99-99")
 });
 // var slider = tns({
 //     container: '.carousel__inner',

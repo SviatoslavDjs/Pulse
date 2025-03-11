@@ -19,4 +19,15 @@
         line-height: 1.5;
         color: var(--light-color);
     }
+
+    .error {
+        border: 1px solid red;
+        margin: 0 auto 10px auto;
+        text-align: center;
+    }
+
+    label.error {
+        color: #f2f2f2;
+        border: none;
+    }
 }
