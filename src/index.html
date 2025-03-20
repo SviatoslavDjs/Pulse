@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="container">
             <header class="header">
                 <a class="header__logo">
@@ -70,7 +71,7 @@
                     готуються до змагань з тріатлону!
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/heart.png" alt="Heartrates">
+                    <img src="icons/heart.png" alt="Heartrates" class="advantages__icon_animated">
                     <h3>Піклуємось про здоров'я</h3>
                     Ми працюємо для того, щоб Ваші заняття спортом йшли на користь Вашому здоров'ю та були на радість
                     Вам та Вашим близьким!
@@ -130,7 +131,7 @@
                 </li>
             </ul>
             <div class="catalog__content catalog__content_active">
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulse.png" alt="" class="catalog-item__img">
@@ -157,7 +158,7 @@
                         <button class="button button_mini">Купити</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulse.png" alt="" class="catalog-item__img">
@@ -184,7 +185,7 @@
                         <button class="button button_mini">Купити</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulse.png" alt="" class="catalog-item__img">
@@ -211,7 +212,7 @@
                         <button class="button button_mini">Купити</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulse.png" alt="" class="catalog-item__img">
@@ -238,7 +239,7 @@
                         <button class="button button_mini">Купити</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulse.png" alt="" class="catalog-item__img">
@@ -265,7 +266,7 @@
                         <button class="button button_mini">Купити</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulse.png" alt="" class="catalog-item__img">
@@ -383,7 +384,7 @@
     <section class="reviews">
         <div class="container">
             <div class="reviews__title">Відгуки клієнтів</div>
-            <div class="reviews__wrapper">
+            <div class="reviews__wrapper wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/reviews_1.png" alt="Avatar">
                 <div class="reviews__info">
                     <div class="reviews__name">Ірина Іванченко</div>
@@ -398,7 +399,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews__wrapper">
+            <div class="reviews__wrapper wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/reviews_2.png" alt="Avatar">
                 <div class="reviews__info">
                     <div class="reviews__name">Іван Семочкін</div>
@@ -412,7 +413,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews__wrapper">
+            <div class="reviews__wrapper wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/reviews_3.png" alt="Avatar">
                 <div class="reviews__info">
                     <div class="reviews__name">Юлія Дашкіна</div>
@@ -475,6 +476,8 @@
             <div class="modal__desr">Наш менеджер зв'яжеться з нами</div>
         </div>
     </div>
+    <a href="#up" class="pageup"><img src="icons/circle.svg" alt="up"></a>
+
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -490,6 +493,7 @@
         crossorigin="anonymous"></script> -->
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
