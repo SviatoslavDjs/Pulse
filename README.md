@@ -1,0 +1,1 @@
+Educational project — a fitness bracelet store website built with HTML, SCSS/SASS, JavaScript, and PHP. It includes interactive elements, tabs, and input forms. The site is optimized and fully responsive across different devices.
